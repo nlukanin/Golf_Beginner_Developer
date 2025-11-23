@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Golf.unity
-    guid: 8ad9dfe7e787aa5468249953a715f64c
-  m_configObjects: {}
+    path: Assets/Scenes/Test_1.unity
+    guid: 44fa1c2e31cad4d48a739d0683487294
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7f7ed8f3387bb48449a721eca86e6ebc, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 0db52ff8dca5a4d4ea84d67384a79302, type: 2}

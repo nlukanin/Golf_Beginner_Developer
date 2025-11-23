@@ -36,19 +36,19 @@ namespace Golf
 
         public void OnCollisionStick(Collider collider)
         {
+            Debug.Log(collider, this);
+
             if (collider.TryGetComponent<Rigidbody>(out Rigidbody body))
             {
                 var dir = (helper.position - m_lastPosition).normalized;
                 body.AddForce(dir * power, ForceMode.Impulse);
-                
+
                 if (collider.TryGetComponent(out Stone stone) && !stone.isAffect)
                 { 
                     stone.isAffect = true;
                     GameEvents.StickHit();
                 }
             }
-
-            Debug.Log(collider, this);
         }
     }
 

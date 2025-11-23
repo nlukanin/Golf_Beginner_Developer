@@ -43,13 +43,11 @@ namespace Golf
         {
             GameEvents.onStickHit += OnStickHit;
             score = 0;
-
         }
 
         private void OnDisable()
         {
             GameEvents.onStickHit -= OnStickHit;
-
         }
 
         private void OnStickHit()

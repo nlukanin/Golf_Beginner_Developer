@@ -38,9 +38,9 @@ namespace Golf
         {
             if (collider.TryGetComponent<Rigidbody>(out Rigidbody body))
             {
-                //var dir = m_isDown ? stick.right : -stick.right;
                 var dir = (helper.position - m_lastPosition).normalized;
                 body.AddForce(dir * power, ForceMode.Impulse);
+                
                 if (collider.TryGetComponent(out Stone stone) && !stone.isAffect)
                 { 
                     stone.isAffect = true;
@@ -48,7 +48,7 @@ namespace Golf
                 }
             }
 
-            //Debug.Log(collider, this);
+            Debug.Log(collider, this);
         }
     }
 
